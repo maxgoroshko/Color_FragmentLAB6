@@ -7,18 +7,4 @@
     android:id="@+id/backgroundID"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/spinner_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="466dp">
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/color_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </FrameLayout>
-
 </LinearLayout>
