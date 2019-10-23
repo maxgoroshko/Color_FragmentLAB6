@@ -1,18 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Color_Fragment</string>
 
     <string-array name="colorsShow">
-        <item>Choose a color</item>
-        <item>Red</item>
-        <item>Blue</item>
-        <item>Green</item>
+        <item>Elige un color</item>
+        <item>Rojo</item>
+        <item>Azul</item>
+        <item>Verde</item>
         <item>Magenta</item>
-        <item>Purple</item>
-        <item>Black</item>
-        <item>Yellow</item>
-        <item>White</item>
-        <item>Cyan</item>
-        <item>Grey</item>
+        <item>Púrpura</item>
+        <item>Negro</item>
+        <item>Amarillo</item>
+        <item>Blanco</item>
+        <item>Cian</item>
+        <item>Gris</item>
     </string-array>
 
     <string-array name="colors">
@@ -28,5 +28,4 @@
         <item>Cyan</item>
         <item>Grey</item>
     </string-array>
-
 </resources>

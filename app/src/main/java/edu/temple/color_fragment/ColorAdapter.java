@@ -12,12 +12,12 @@ public class ColorAdapter extends BaseAdapter {
 
     Context context;
 
-    String[] colors;
+    String[] colors,colorsShow;
 
-    public ColorAdapter(Context context, String[] colors) {
+    public ColorAdapter(Context context, String[] colors, String[] colorsShow) {
         this.context = context;
         this.colors = colors;
-        colors = context.getResources().getStringArray(R.array.colors);
+        this.colorsShow = colorsShow;
     }
     @Override
     public int getCount() {
@@ -44,7 +44,7 @@ public class ColorAdapter extends BaseAdapter {
             textView = new TextView(context);
         }
         textView.setTextSize(37);
-        textView.setText(colors[position]);
+        textView.setText(colorsShow[position]);
         return textView;
     }
 
@@ -60,10 +60,10 @@ public class ColorAdapter extends BaseAdapter {
 
         textView.setBackgroundColor(Color.WHITE);
         textView.setTextSize(37);
-        textView.setText(colors[position]);
+        textView.setText(colorsShow[position]);
 
         try {
-            textView.setBackgroundColor(Color.parseColor(textView.getText().toString()));
+            textView.setBackgroundColor(Color.parseColor(colors[position]));
         }
         catch(Exception e){}
         return textView;

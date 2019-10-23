@@ -1,13 +1,8 @@
 package edu.temple.color_fragment;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.Spinner;
+
 
 public class MainActivity extends AppCompatActivity implements PalleteActivity.SelectedColor {
 
@@ -17,11 +12,11 @@ public class MainActivity extends AppCompatActivity implements PalleteActivity.S
         setContentView(R.layout.activity_main);
 
 
-        PalleteActivity colorSPinner = PalleteActivity.newInstance(getResources().getStringArray(R.array.colors));
+        PalleteActivity colorSPinner = PalleteActivity.newInstance(getResources().getStringArray(R.array.colors),getResources().getStringArray(R.array.colorsShow));
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.spinnerFragment, colorSPinner)
+                .replace(R.id.spinnerFragment, colorSPinner)
                 .commit();
 
     }
