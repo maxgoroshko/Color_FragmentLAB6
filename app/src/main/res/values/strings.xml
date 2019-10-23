@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Color_Fragment</string>
+
+    <string-array name="colors">
+        <item>Choose a color</item>
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Magenta</item>
+        <item>Purple</item>
+        <item>Black</item>
+        <item>Yellow</item>
+        <item>White</item>
+        <item>Cyan</item>
+        <item>Grey</item>
+    </string-array>
+
+</resources>
