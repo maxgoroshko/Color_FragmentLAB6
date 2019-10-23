@@ -19,7 +19,7 @@ public class CanvasActivity extends Fragment {
     private static final String ARG_PARAM1 = "colors";
 
 
-    
+
     private String color;
 
 

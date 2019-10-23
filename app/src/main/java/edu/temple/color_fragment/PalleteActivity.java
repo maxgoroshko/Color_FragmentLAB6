@@ -22,7 +22,7 @@ public class PalleteActivity extends Fragment {
 
     public PalleteActivity(){}
 
-    private OnFragmentInteractionListener fragmentParent;
+    private SelectedColor fragmentParent;
 
 
     public static PalleteActivity newInstance(String[] color) {
@@ -38,6 +38,9 @@ public class PalleteActivity extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             color = getArguments().getStringArray(ARG_PARAM1);
+        }
+        else {
+            throw new NullPointerException();
         }
     }
 
@@ -55,7 +58,7 @@ public class PalleteActivity extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String colorName = ((TextView)view).getText().toString();
-                fragmentParent.onFragmentInteraction(colorName);
+                fragmentParent.onSelectedColor(colorName);
             }
 
             @Override
@@ -72,15 +75,15 @@ public class PalleteActivity extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            fragmentParent = (OnFragmentInteractionListener) context;
+        if (context instanceof SelectedColor) {
+            fragmentParent = (SelectedColor) context;
         }
     }
 
 
 
-    public interface OnFragmentInteractionListener {
+    public interface SelectedColor {
         // TODO: Update argument type and name
-        void onFragmentInteraction(String colorName);
+        void onSelectedColor(String colorName);
     }
 }

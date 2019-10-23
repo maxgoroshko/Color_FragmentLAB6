@@ -5,6 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/backgroundID"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
+    <FrameLayout
+        android:id="@+id/spinnerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".85">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/canvasFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight=".15"
+        android:hapticFeedbackEnabled="false">
+
+    </FrameLayout>
 </LinearLayout>
